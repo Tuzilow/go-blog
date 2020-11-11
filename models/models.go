@@ -2,10 +2,12 @@ package models
 
 import (
 	"fmt"
-	"go_crud/pkg/setting"
+	"go_blog/pkg/setting"
 	"log"
 
 	"github.com/jinzhu/gorm"
+	// mysql
+	_ "github.com/jinzhu/gorm/dialects/mysql"
 )
 
 var db *gorm.DB

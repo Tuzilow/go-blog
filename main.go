@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"go_crud/pkg/setting"
-	"go_crud/routers"
+	"go_blog/pkg/setting"
+	"go_blog/routers"
 	"net/http"
 )
 

@@ -1,7 +1,7 @@
 package util
 
 import (
-	"go_crud/pkg/setting"
+	"go_blog/pkg/setting"
 
 	"github.com/gin-gonic/gin"
 	"github.com/unknwon/com"
