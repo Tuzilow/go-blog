@@ -1,10 +1,10 @@
 package v1
 
 import (
-	"go_blog/models"
-	"go_blog/pkg/e"
-	"go_blog/pkg/setting"
-	"go_blog/pkg/util"
+	"go-blog/models"
+	"go-blog/pkg/e"
+	"go-blog/pkg/setting"
+	"go-blog/pkg/util"
 	"net/http"
 
 	"github.com/astaxie/beego/validation"
@@ -43,9 +43,13 @@ func GetTags(c *gin.Context) {
 	})
 }
 
-// AddTag 添加文章标签
-//
-// POST http://127.0.0.1:8000/api/v1/tags?name=1&state=1&created_by=test
+// @Summary 新增文章标签
+// @Produce  json
+// @Param name query string true "Name"
+// @Param state query int false "State"
+// @Param created_by query int false "CreatedBy"
+// @Success 200 {string} json "{"code":200,"data":{},"msg":"ok"}"
+// @Router /api/v1/tags [post]
 func AddTag(c *gin.Context) {
 	name := c.Query("name")
 	state := com.StrTo(c.DefaultQuery("state", "0")).MustInt()

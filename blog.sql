@@ -1,6 +1,6 @@
-create database go_blog;
+create database go-blog;
 
-use go_blog;
+use go-blog;
 
 CREATE TABLE `blog_tag` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -37,4 +37,4 @@ CREATE TABLE `blog_auth` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `go_blog`.`blog_auth` (`id`, `username`, `password`) VALUES (null, 'test', 'test123456');
+INSERT INTO `go-blog`.`blog_auth` (`id`, `username`, `password`) VALUES (null, 'test', 'test123456');

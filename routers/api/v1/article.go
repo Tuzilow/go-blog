@@ -1,10 +1,11 @@
 package v1
 
 import (
-	"go_blog/models"
-	"go_blog/pkg/e"
-	"go_blog/pkg/setting"
-	"go_blog/pkg/util"
+	"go-blog/models"
+	"go-blog/pkg/e"
+	"go-blog/pkg/logging"
+	"go-blog/pkg/setting"
+	"go-blog/pkg/util"
 	"log"
 	"net/http"
 
@@ -33,7 +34,7 @@ func GetArticle(c *gin.Context) {
 		}
 	} else {
 		for _, err := range valid.Errors {
-			log.Printf("err.key: %s, err.message: %s", err.Key, err.Message)
+			logging.Info("err.key: %s, err.message: %s", err.Key, err.Message)
 		}
 	}
 	c.JSON(http.StatusOK, gin.H{
@@ -47,6 +48,7 @@ func GetArticle(c *gin.Context) {
 //
 // GET http://127.0.0.1:8000/api/v1/articles
 func GetArticles(c *gin.Context) {
+	logging.Info("test")
 	data := make(map[string]interface{})
 	maps := make(map[string]interface{})
 	valid := validation.Validation{}

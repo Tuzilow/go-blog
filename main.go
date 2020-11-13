@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"go_blog/pkg/setting"
-	"go_blog/routers"
+	"go-blog/pkg/setting"
+	"go-blog/routers"
 	"net/http"
 )
 
